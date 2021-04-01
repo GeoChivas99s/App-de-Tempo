@@ -10,29 +10,28 @@ import * as Icons from 'react-icons/ai';
 import * as I from    'react-icons/wi';
 
 */
-import {getData} from '../../API/API';
+
 
  function Esquerda() {
   
+    const apiKey = '856a6e3cecb7d692a9fd459e9937e951';
 
+      const  getData  = async () => {
+   
+        const data = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=2e5660b01e0572c13d96b747b0d2555a`)
+        const res = await data.json();
+        console.log(res);
+        setTempo(res);
+        return res;
+ 
+}
 
 const [mostra, alterar]= useState(false);
 const [cidade , setCidade] = ('Luanda');
 
 const [tempo , setTempo] = ([]);
 
-const pegaTempo = async () =>{
 
-try{
-
-    const data = await getData(cidade);
-    setTempo(data);
-    console.log(data);
-}catch(error){
-    console.log(error.message);
-}
-
-}
 
 const mostrar = () => alterar(!mostra) ;
 return(
@@ -61,7 +60,7 @@ return(
 
     <section>
    <input type="text" placeholder= "Pesquisar" />
-   <button onClick={mostrar} >Já</button>
+   <button onClick={getData } >Já</button>
 
     </section>
      
