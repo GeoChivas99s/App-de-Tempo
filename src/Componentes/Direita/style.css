@@ -1,0 +1,155 @@
+.dir{
+display: flex;
+width: 1000px;
+background: #100E1D;
+z-index: 2;
+ align-items: center;
+ flex-direction: column;
+ font-family: sans-serif;
+box-sizing: border-box;
+
+
+}
+
+.dir #cabecalho{
+
+
+
+display: flex;
+width: 90px;
+height: 30px;
+justify-content: space-between;
+color:white;
+align-self: flex-end;
+padding-right:  60px;
+padding-top: 20px;
+}
+.dir #cabecalho i{
+
+    background: #6E707A;
+   border-radius: 30px;
+   padding: 10px;
+}
+.dir #cabecalho #farenheit{
+    background-color:  #1E213A;
+}
+
+.dir #nuvem{
+
+display: flex;
+width: 90%;
+justify-content: space-between;
+height: 130px;
+margin-top: 20px;
+
+}
+@media(max-width:700px)
+{ .dir{
+
+    width: inherit;
+}
+    
+    .dir #nuvem{
+          width: inherit;
+         
+    }
+    .dir #nuvem article{
+
+        border-right: 0.5px solid  #100E1D;  ;
+    }
+    .dir #nuvem:last-child{
+
+        border: none;
+    }
+}
+
+
+.dir #nuvem article{
+
+   background: #1E213A;
+   flex-basis: 150px;
+   display: flex;
+   color: white;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items:center;
+}
+
+
+.dir #nuvem #caixa1{
+
+
+justify-content: space-around;
+align-items: center;
+padding: 5px;
+
+}
+.dir #nuvem #caixa1 #image {
+ 
+width: 60px;
+
+
+}
+
+.dir #nuvem #caixa1 #image img {
+
+    width: 100%;
+}
+
+
+.dir #nuvem #caixa1 #temp{
+display: flex;
+color: white;
+width: 60%;
+justify-content: space-around;
+
+}
+.dir #valor{
+
+    color: white;
+    display: flex;
+    align-self: flex-start;
+   margin: 30px 0 20px 50px;
+ opacity: 0.6;
+}
+
+.dir #valores1{
+
+display: flex;
+justify-content: space-between;
+width: 90%;
+height: 150px;
+
+}
+.dir #valores1 article{
+color:white;
+display: flex;
+flex-direction: column;
+justify-content:space-around ;
+align-items: center;
+background-color: #1E213A;
+flex-basis: 350px;
+border: 1px solid #100E1D;
+}
+
+.dir #valores1 article h1{
+    font-size: 3rem;
+}
+.dir #valores1 article h1 i{
+opacity: 0.5;
+font-size: 2rem;
+
+}
+.dir .valores01{
+
+    
+   margin-top: 20px;
+
+}
+
+.dir h6{
+
+    color: white;
+    margin-top: 40px;
+    opacity: 0.8;
+}
